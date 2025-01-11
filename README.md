@@ -42,7 +42,7 @@ tqdm = 4.66.6
 | `mode` | `cv`or`out` |
 | `run` | int value for run times |
 
-# 3. Get result
+# 4. Get result
   For each fold in a single cv, you can get the best epoch of the train in `train_result.txt`.
   After all fold trained in a single cv, you can get the evaluation of all fold in `predict_result.txt` and the result of prediction in fold `./result`.
   If you run on `out` mode, there will be only 1 result in `train_result.txt` and `predict_result.txt`.
