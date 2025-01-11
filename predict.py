@@ -12,9 +12,9 @@ testset = "/test_fasta"
 testlabel = "/test_label"
 
 # path
-Dataset_Path = './date/'
+Dataset_Path = './data/'
 Result_Path = './result/'
-Prot_Path ='./date/'
+Prot_Path ='./data/'
 
 # Seed
 SEED = 4396
