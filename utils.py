@@ -70,7 +70,7 @@ def load_data(seq_file, labelfile, pssmdir, graphdir,protdir):
     labels = []
     features = []
     graphs = []
-    prots = []
+    
 
     f = open(labelfile, "r")
     num = 0
