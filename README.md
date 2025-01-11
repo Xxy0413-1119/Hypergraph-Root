@@ -1,4 +1,4 @@
-# Hypergraph--Root
+# Hypergraph-Root
 Root-Associated Proteins in Plants Prediction Model Based on Hypergraph Convolutional Network
 
 # 1. Description
@@ -41,3 +41,10 @@ tqdm = 4.66.6
 | ------------- | ------------- |
 | `mode` | `cv`or`out` |
 | `run` | int value for run times |
+
+# 3. Get result
+  For each fold in a single cv, you can get the best epoch of the train in `train_result.txt`.
+  After all fold trained in a single cv, you can get the evaluation of all fold in `predict_result.txt` and the result of prediction in fold `./result`.
+  If you run on `out` mode, there will be only 1 result in `train_result.txt` and `predict_result.txt`.
+  If the value of `run` is bigger than 1, former result in `train_result.txt` of a single `cv` or `out` will be override. If you want to save the result of this file, please modify the code on your own.
+  Samely, if you run the main.py again, all the result will be override.
