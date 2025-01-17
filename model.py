@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch
 import math
 
-# GCN parameters
-HGCN_FEATURE_DIM = 1064
+# HGCN parameters
+HGCN_FEATURE_DIM = 1064H
 HGCN_HIDDEN_DIM = 256
 HGCN_OUTPUT_DIM = 64
 
