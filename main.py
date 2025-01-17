@@ -88,8 +88,8 @@ def train_and_test(df):
         os.makedirs(modelp)
     if not result:
         os.makedirs(resultp)
-    train.main("114514", out_test)
-    predict.main("114514", out_test)
+    train.main("0413", out_test)
+    predict.main("0413", out_test)
 
 def remove_dir(dir):
     dir = dir.replace('\\', '/')
