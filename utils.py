@@ -44,7 +44,6 @@ def convertSampleToBlosum62(seq):
         AANo += 1
     return probMatr
 
-
 def readPSSM(pssmfile):
     """
     read pssm file and return a feature matrix: length * 20
@@ -63,20 +62,14 @@ def readPSSM(pssmfile):
             pssm.append(line[2: 22])
     return np.array(pssm)
 
-
-
-
 def load_data(seq_file, labelfile, pssmdir, graphdir,protdir):
     labels = []
     features = []
     graphs = []
-    
-
     f = open(labelfile, "r")
     num = 0
     print("Load data.")
     for seq_record in list(SeqIO.parse(seq_file, "fasta")):
-
         pssmfile = pssmdir + str(seq_record.id) + "_pssm.txt"
         pssm = readPSSM(pssmfile)
         pssm = pssm.astype(float)
@@ -87,19 +80,13 @@ def load_data(seq_file, labelfile, pssmdir, graphdir,protdir):
         prot = df.values.astype(float)
         feature = np.concatenate((feature, prot), axis=1)
         features.append(feature)
-
         label = f.readline().strip()
         labels.append(label)
-
-
-
-
         graph = np.load(graphdir + seq_record.id + ".npy", allow_pickle=True)
         Xgraph_row = np.size(graph, 0)
         for j in range(Xgraph_row):
             for i in range(j + 1):
                 graph[j][i] = 0
-
         graph_f = graph.flatten()
         graph_f_s = np.sort(graph_f)[::-1]
         l_3 = graph_f_s[3 * Xgraph_row]
@@ -138,7 +125,7 @@ def calculate(a):
     pt += TN
     sensitivity = round(TP / (TP + FN), 3) if TP + FN != 0 else 0.
     specificity = round(TN / (TN + FP), 3) if TN + FP != 0 else 0.
-    accuracy = round((sensitivity + specificity) / 2, 3)
+    accuracy = round((TP + TN) / (TP + TN + FP + FN), 3) if TP + TN + FP + FN != 0 else 0. 
     Precision = round(TP / (TP + FP), 3) if TP + FP != 0 else 0.
     Recall = round(TP / (TP + FN), 3) if TP + FN != 0 else 0.
     mcc_num = round(((TP * TN) - (FP * FN)) / sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN)), 3) if ((TP + FP) * (
