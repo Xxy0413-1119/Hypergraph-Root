@@ -3,7 +3,8 @@ Root-Associated Proteins in Plants Prediction Model Based on Hypergraph Convolut
 
 # 1. Description
 In Hypergraph-Root, three feature types of proteins are adopted, which are derived from protein sequences. These features are processed by a hypergraph convolutional network and multi-head attention module. Then, the improved features are fed into the fully connected layer for make predictions. 
-![Image text](https://github.com/Xxy0413-1119/Hypergraph-Root/blob/main/images/292f8989714312bd0bcfb2194a6e7a0.png)
+
+![Image text](https://github.com/Xxy0413-1119/Hypergraph-Root/blob/main/images/bd1e0c9285b0f74bbc0d32ed7b59c80.png)
 
 # 2. Requirements
 pandas = 2.2.3
