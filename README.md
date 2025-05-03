@@ -2,7 +2,7 @@
 Root-Associated Proteins in Plants Prediction Model Based on Hypergraph Convolutional Network
 
 # 1. Description
-In the Hypergraph-Root model, the features of proteins are extracted based on the raw features of their amino acids.These raw features are first fed into the Hypergraph Convolutional Network for initial processing to fully exploit the complex relationships and potential information between amino acids.Subsequently, the features processed by the hypergraph convolutional network will be fed into the multi-head attention module, which is able to deeply analyze and weight and integrate the features from different perspectives to further enhance the expressive ability and differentiation of the features.Finally, the features that have been synergistically optimized by the hypergraph convolutional network and the multi-head attention module will be sent to the fully connected layer, which generates the prediction results of protein classes through a series of complex linear transformations and nonlinear activation operations.
+In Hypergraph-Root, three feature types of proteins are adopted, which are derived from protein sequences. These features are processed by a hypergraph convolutional network and multi-head attention module. Then, the improved features are fed into the fully connected layer for make predictions. 
 
 # 2. Requirements
 pandas = 2.2.3
