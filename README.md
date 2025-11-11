@@ -24,7 +24,7 @@ biopython = 1.84
 
 tqdm = 4.66.6
 
-InterPro 104.0 
+InterPro = 104.0 
 
 ## Hardware Configuration
 Operating System: Windows 10 (64-bit)
