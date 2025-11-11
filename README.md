@@ -7,6 +7,7 @@ In Hypergraph-Root, three feature types of proteins are adopted, which are deriv
 ![Image text](https://github.com/Xxy0413-1119/Hypergraph-Root/blob/main/images/bd1e0c9285b0f74bbc0d32ed7b59c80.png)
 
 # 2. Requirements
+## Software Dependencies
 pandas = 2.2.3
 
 Python >= 3.10.15
@@ -22,6 +23,19 @@ numpy = 1.26.4
 biopython = 1.84
 
 tqdm = 4.66.6
+
+InterPro 104.0 
+
+## Hardware Configuration
+Operating System: Windows 10 (64-bit)
+
+CPU: AMD Ryzen 9 7950X
+
+GPU: NVIDIA GeForce RTX 4080
+
+Memory (RAM): 192 GB
+
+CUDA Version: 11.8
 
 # 3. How to use
 1.Set up your enviroment and download the code from github
